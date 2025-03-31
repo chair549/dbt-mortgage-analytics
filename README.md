@@ -1,72 +1,67 @@
 # 🏡 Mortgage Analytics Project (dbt + Databricks)
 
-This project demonstrates a real-world data transformation pipeline using **dbt Cloud** and **Databricks**, designed for clean, documented analytics and business intelligence.
+This project demonstrates a complete, production-style data transformation pipeline using **dbt Cloud** and **Databricks**, with a Power BI dashboard as the final business deliverable. The aim was to replicate a real-world analytics engineering workflow — from raw data ingestion, transformation, and testing, to dashboarding and insights delivery.
+
+---
+
+## 🎯 Why I Built This
+
+I built this project to strengthen my skills in modern data stack tools like **dbt**, **Databricks**, and **Power BI**, while showcasing my ability to:
+
+- Build clean, tested, modular SQL transformations
+- Design layered data models (staging → marts)
+- Work through the real challenges of cloud-based pipelines
+- Document and communicate my thought process as if working on a team
+
+I had **never connected dbt to Databricks before**, and learning how to do that (including configs, tokens, catalogs, and YAML setup) was a key part of the journey. It reflects not just the technical output — but the practical learning process that comes with building an actual pipeline from scratch.
 
 ---
 
 ## 🚀 Tools Used
 
-- **Databricks SQL Warehouse** – Data storage and compute
-- **dbt Cloud** – Data transformation, testing, documentation
-- **Power BI**  – Dashboard & visualization layer
+- **Databricks SQL Warehouse** – Cloud-based compute and data storage
+- **dbt Cloud** – Transformation, testing, documentation, modular SQL
+- **Power BI** – Dashboard and business-facing analytics
+- **GitHub** – Version control and portfolio hosting
 
 ---
 
-## 📊 Dashboard (Power BI)
+## 📊 Power BI Dashboard
 
-This project includes a Power BI report that visualizes key mortgage KPIs from the dbt-transformed dataset.
-Here’s a sample of the Power BI dashboard built on top of the dbt-transformed dataset:
+The dashboard visualizes key mortgage KPIs sourced from the dbt-transformed tables in Databricks.
+
+It includes:
+
+- Total + average loan amounts
+- Settlement vs withdrawal rates
+- Loan distribution by size, region, and type
+- Approval timelines
+- Conditional approval risk bands
+
+📸 Preview:
+
 ![Mortgage Dashboard](mortgage_dashboard.PNG)
 
 ---
 
-## 📊 Data Overview
+## 🧠 What I Learned (and struggled through)
 
-- Source: Manually uploaded mortgage applications CSV
-- Raw table: `workspace.mortgage_analytics.raw_mortgage_data`
-- Staging model: `stg_mortgage_data` – cleans and casts raw data
-- Metrics model: `mortgage_metrics` – aggregates insights like:
-  - Loan count by state and type
-  - Average loan amount
-  - Settled vs withdrawn applications
-  - Banker performance
+- 📡 **Connecting dbt to Databricks**: Setting up tokens, profiles.yml, catalogs (`workspace` vs `main`), and schema access was non-trivial. I ran into multiple `NO_SUCH_CATALOG_EXCEPTION` and connection hangs — and learned how to debug them using Databricks SQL Explorer and proper config formatting.
+- ⚙️ **Understanding dbt’s flow**: Realized how `sources`, `staging`, and `marts` fit together conceptually and in code.
+- 🧪 **Writing modular, tested SQL**: dbt encouraged me to split raw data cleaning into clean staging models before aggregating for final reporting.
+- 🔁 **Iteration**: I rebuilt my project from scratch after hitting the dbt Cloud free project limit — this helped solidify my understanding of every part of the pipeline.
 
 ---
 
-## 🧪 Data Quality
+## 📦 Project Structure
 
-Includes **automated tests** using dbt:
-- `not_null` and `unique` constraints on key fields
-- Source freshness & structure defined in YAML
-- Re-runnable, documented, and testable transformations
-
----
-
-## 🧠 Project Structure
-
-<pre> [dbt-mortgage-analytics/
+```text
+dbt-mortgage-analytics/
 ├── models/
 │   ├── staging/
-│   │   ├── src_mortgage_data.yml       # Source config + tests
-│   │   └── stg_mortgage_data.sql       # Cleaned raw mortgage data
+│   │   ├── src_mortgage_data.yml       # Source config + field-level tests
+│   │   └── stg_mortgage_data.sql       # Casts, cleans, standardizes raw data
 │   └── marts/
-│       └── mortgage_metrics.sql        # Aggregated KPIs for dashboarding
-├── dbt_project.yml                     # dbt project configuration
-└── README.md                           # Project documentation
-]  </pre>
----
-
-
-## ✅ Skills Showcased
-
-- dbt Cloud usage (sources, models, tests, docs)
-- SQL transformations on Databricks
-- Analytics engineering pipeline setup
-- GitHub integration for version control
-
----
-
-## 📌 Links
-
-- **dbt Docs**: [View Lineage & Docs](https://cloud.getdbt.com/#!/projects/401827/docs)
-- **Databricks Workspace**: [SQL Warehouse](https://dbc-15d988a4-2e10.cloud.databricks.com/compute/sql-warehouses)
+│       └── mortgage_metrics.sql        # Business-facing KPIs & aggregations
+├── dbt_project.yml                     # Core dbt config (name, paths, etc.)
+└── README.md                           # This file
