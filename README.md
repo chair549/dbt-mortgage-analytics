@@ -8,7 +8,7 @@ This project demonstrates a real-world data transformation pipeline using **dbt 
 
 - **Databricks SQL Warehouse** – Data storage and compute
 - **dbt Cloud** – Data transformation, testing, documentation
-- **Power BI** *(optional next step)* – Dashboard & visualization layer
+- **Power BI**  – Dashboard & visualization layer
 
 ---
 
@@ -36,7 +36,7 @@ Includes **automated tests** using dbt:
 
 ## 🧠 Project Structure
 
-<pre> ```text [dbt-mortgage-analytics/
+<pre> [dbt-mortgage-analytics/
 ├── models/
 │   ├── staging/
 │   │   ├── src_mortgage_data.yml       # Source config + tests
@@ -44,8 +44,8 @@ Includes **automated tests** using dbt:
 │   └── marts/
 │       └── mortgage_metrics.sql        # Aggregated KPIs for dashboarding
 ├── dbt_project.yml                     # dbt project configuration
-└── README.md                           # Project documentation (this file)
-] ``` </pre>
+└── README.md                           # Project documentation
+]  </pre>
 ---
 
 ## 📈 Dashboard (Power BI or CSV Export)
