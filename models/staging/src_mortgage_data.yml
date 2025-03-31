@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: mortgage_analytics
+    schema: mortgage_analytics
+    tables:
+      - name: raw_mortgage_data
+        columns:
+          - name: application_submission_id
+            tests:
+              - not_null
+              - unique
+          - name: customer_id
+            tests:
+              - not_null

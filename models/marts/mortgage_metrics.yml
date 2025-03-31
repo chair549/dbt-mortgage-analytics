@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: mortgage_metrics
+    description: "Aggregated mortgage insights for reporting"
+    columns:
+      - name: state
+        description: "Customer's residential state"
+      - name: avg_loan_amount
+        description: "Average loan amount by state + loan type"
+        tests:
+          - not_null
