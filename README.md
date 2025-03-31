@@ -48,9 +48,9 @@ Includes **automated tests** using dbt:
 ]  </pre>
 ---
 
-## 📈 Dashboard (Power BI or CSV Export)
+## 📊 Dashboard (Power BI or CSV Export)
 
-Cleaned data from `mortgage_metrics` is ready for Power BI or export as a CSV for visualization.
+This project includes a Power BI report that visualizes key mortgage KPIs from the dbt-transformed dataset.
 
 ---
 
