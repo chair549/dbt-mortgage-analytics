@@ -1,6 +1,6 @@
 # 🏡 Mortgage Analytics Project (dbt + Databricks)
 
-This project demonstrates a complete, production-style data transformation pipeline using **dbt Cloud** and **Databricks**, with a Power BI dashboard as the final business deliverable. The aim was to replicate a real-world analytics engineering workflow — from raw data ingestion, transformation, and testing, to dashboarding and insights delivery.
+This project demonstrates a complete, production-style data transformation pipeline using **dbt Cloud** and **Databricks**, with a Power BI dashboard as the final business deliverable. The aim was to replicate a real-world analytics engineering workflow, from raw data ingestion, transformation, and testing, to dashboarding and insights delivery.
 ---
 
 ## 🚀 Tools Used
