@@ -36,7 +36,7 @@ Includes **automated tests** using dbt:
 
 ## 🧠 Project Structure
 
-dbt-mortgage-analytics/
+<pre> ```text [dbt-mortgage-analytics/
 ├── models/
 │   ├── staging/
 │   │   ├── src_mortgage_data.yml       # Source config + tests
@@ -45,7 +45,7 @@ dbt-mortgage-analytics/
 │       └── mortgage_metrics.sql        # Aggregated KPIs for dashboarding
 ├── dbt_project.yml                     # dbt project configuration
 └── README.md                           # Project documentation (this file)
-
+] ``` </pre>
 ---
 
 ## 📈 Dashboard (Power BI or CSV Export)
