@@ -36,14 +36,15 @@ Includes **automated tests** using dbt:
 
 ## 🧠 Project Structure
 
-models/
-├── staging/
-│   ├── src_mortgage_data.yml        # Defines source table and tests
-│   └── stg_mortgage_data.sql        # Cleans and casts raw mortgage data
-├── marts/
-│   └── mortgage_metrics.sql         # Aggregated metrics for dashboarding
-dbt_project.yml                      # dbt config file
-README.md                            # Project overview and documentation
+dbt-mortgage-analytics/
+├── models/
+│   ├── staging/
+│   │   ├── src_mortgage_data.yml        # Source config + tests
+│   │   └── stg_mortgage_data.sql        # Cleans raw mortgage data
+│   ├── marts/
+│   │   └── mortgage_metrics.sql         # Aggregated KPIs by state & loan type
+├── dbt_project.yml                      # dbt project configuration
+└── README.md                            # Project documentation (this file)
 
 ---
 
