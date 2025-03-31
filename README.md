@@ -12,6 +12,14 @@ This project demonstrates a real-world data transformation pipeline using **dbt 
 
 ---
 
+## 📊 Dashboard (Power BI)
+
+This project includes a Power BI report that visualizes key mortgage KPIs from the dbt-transformed dataset.
+Here’s a sample of the Power BI dashboard built on top of the dbt-transformed dataset:
+![Mortgage Dashboard](mortgage_dashboard.PNG)
+
+---
+
 ## 📊 Data Overview
 
 - Source: Manually uploaded mortgage applications CSV
@@ -48,13 +56,6 @@ Includes **automated tests** using dbt:
 ]  </pre>
 ---
 
-## 📊 Dashboard (Power BI or CSV Export)
-
-This project includes a Power BI report that visualizes key mortgage KPIs from the dbt-transformed dataset.
-Here’s a sample of the Power BI dashboard built on top of the dbt-transformed dataset:
-![Mortgage Dashboard](mortgage_dashboard.PNG)
-
----
 
 ## ✅ Skills Showcased
 
